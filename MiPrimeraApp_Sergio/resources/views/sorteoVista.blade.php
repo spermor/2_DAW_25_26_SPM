@@ -1,0 +1,1 @@
+El numero aleatorio es {{ $random }}

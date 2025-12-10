@@ -1,0 +1,1 @@
+El resultado de sumar {{ $n1 }} y {{ $n2 }} es {{ $resultado }}
