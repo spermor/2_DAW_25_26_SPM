@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CalculadoraController;
 use App\Http\Controllers\CalculadoraIMCController;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\Refuerzo1Controller;
 use App\Http\Controllers\SorteoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HolaController;
@@ -19,8 +21,11 @@ Route::get('/sorteo/numero/{numero?}', [SorteoController::class, 'numero'])->nam
 
 Route::get('/calcularimc/{peso}/{altura}', [CalculadoraIMCController::class, 'calcularImc'])->name("imc");
 
- 
+Route::get('/calculate/{num1}/{num2}/{operation}', [Refuerzo1Controller::class, 'calcular'])->name("refuerzo1");
 
+Route::get('/items', [ItemController::class, 'mostrarArray'])->name("refuerzo2");
+
+Route::get('/items/{id}', [ItemController::class, 'mostrarValorArray'])->name("refuerzo3");
 
 
 

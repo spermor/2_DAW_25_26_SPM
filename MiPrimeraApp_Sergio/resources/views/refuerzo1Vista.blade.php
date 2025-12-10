@@ -1,0 +1,1 @@
+El resultado de la {{ $operation }} entre {{ $num1 }} y {{ $num2 }} es {{ $resultado }}

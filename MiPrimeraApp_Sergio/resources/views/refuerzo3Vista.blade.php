@@ -1,0 +1,1 @@
+El valor del array seleccionado es {{ $items[(string)$id] }}
