@@ -27,5 +27,7 @@ Route::get('/items', [ItemController::class, 'mostrarArray'])->name("refuerzo2")
 
 Route::get('/items/{id}', [ItemController::class, 'mostrarValorArray'])->name("refuerzo3");
 
+Route::get('/sumar', [CalculadoraController::class, 'formularioSumar'])->name("actividad5.8");
 
+Route::post('/resultadoSuma', [CalculadoraController::class, 'procesarFormularioSumar'])->name("procesarSumaForm");
 

@@ -13,7 +13,6 @@ class ItemController extends Controller
     }
 public function mostrarValorArray($id){
         $items = ['Manzanas', 'Plátanos', 'Peras', 'Naranjas'];
-        $error ="";
         if($id>3){
             return "Elemento no encontrado";
             
