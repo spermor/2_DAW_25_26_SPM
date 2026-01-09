@@ -9,9 +9,9 @@
     <p>Hemos recibido la siguiente información:</p>
     
     <ul>
-        <li><strong>Nombre:</strong> {{ $datos['nombre'] }}</li>
-        <li><strong>Email:</strong> {{ $datos['correo'] }}</li>
-        <li><strong>Mensaje:</strong> {{ $datos['mensaje'] }}</li>
+        <li>Nombre:{{ $nombre }}</li>
+        <li>Email:{{ $correo }}</li>
+        <li>Mensaje:{{ $mensaje }}</li>
     </ul>
 
     <a href="{{ route('contact.show') }}">Volver al formulario</a>

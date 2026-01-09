@@ -11,9 +11,9 @@ class ContactController extends Controller
         return view('contacto');
     }
 
-    public function storeForm(Request $request)
+    public function storeForm(Request $r)
     {
-        $validated = $request->validate([
+        $validated = $r->validate([
             'nombre'  => 'required|string|max:30',
             'correo'  => 'required|email',
             'mensaje' => 'required|string|max:500',

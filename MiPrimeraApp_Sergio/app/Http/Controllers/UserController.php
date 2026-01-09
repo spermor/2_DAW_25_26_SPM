@@ -11,13 +11,9 @@ class UserController extends Controller
         return view('user_form');
     }
 
-    public function storeName(Request $request)
+    public function storeName(Request $r)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-        ]);
-
-        $name = $request->input('name');
+        $name = $r->input('name');
 
         return "El nombre recibido es: " . $name;
     }
