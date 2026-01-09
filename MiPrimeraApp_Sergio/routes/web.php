@@ -7,6 +7,8 @@ use App\Http\Controllers\Refuerzo1Controller;
 use App\Http\Controllers\SorteoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HolaController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ContactController;
 
 
 Route::get('/hola', [HolaController::class, 'index'])->name("hola");
@@ -31,3 +33,10 @@ Route::get('/sumar', [CalculadoraController::class, 'formularioSumar'])->name("a
 
 Route::post('/resultadoSuma', [CalculadoraController::class, 'procesarFormularioSumar'])->name("procesarSumaForm");
 
+Route::get('/user/form', [UserController::class, 'showForm'])->name('user.form');
+
+Route::post('/user/store', [UserController::class, 'storeName'])->name('user.store');
+
+Route::get('/contacto', [ContactController::class, 'showForm'])->name('contact.show');
+
+Route::post('/contacto', [ContactController::class, 'storeForm'])->name('contact.store');
