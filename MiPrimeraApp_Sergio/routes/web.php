@@ -4,6 +4,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CalculadoraController;
 use App\Http\Controllers\CalculadoraIMCController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\Refuerzo1Controller;
 use App\Http\Controllers\SorteoController;
 use Illuminate\Support\Facades\Route;
@@ -44,6 +45,17 @@ Route::post('/contacto', [ContactController::class, 'storeForm'])->name('contact
 Route::get('/refuerzo10', [CalculadoraController2::class, 'showForm'])->name('refuerzo10');
 Route::post('/refuerzo10', [CalculadoraController2::class, 'showResult'])->name('procesarRefuerzo10');
 
+// formulario crear articulo
+Route::get('/crearArticulo', [ArticleController::class, 'showFormArticulo'])->name('showFormArticulo');
 
-Route::get('/crearArticulo', [ArticleController::class, 'crearArticulo'])->name('crearArticulo');
+Route::post('/crearArticulo', [ArticleController::class, 'procesarFormArticulo'])->name('procesarFormArticulo');
 
+// Listar articulos
+Route::get('/listararticulos', [ArticleController::class, 'listarArticulos'])->name('listarArticulos');
+
+//5.11
+Route::get('/producto', [ProductoController::class, 'showFormProducto'])->name('showFormProducto');
+Route::post('/producto', [ProductoController::class, 'procesarFormProducto'])->name('procesarFormProducto');
+
+//5.12
+Route::get('/productos', [ProductoController::class, 'mostrarProductos'])->name('mostrarProductos');

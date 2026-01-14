@@ -1,0 +1,1 @@
+El producto {{ $producto->nombre }} se ha creado correctamente

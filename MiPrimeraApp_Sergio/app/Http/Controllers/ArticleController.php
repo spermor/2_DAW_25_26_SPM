@@ -18,4 +18,34 @@ class ArticleController extends Controller
         $art->views = 333;
         $art->save();
     }
+
+
+
+    public function showFormArticulo(Request $r)
+    {
+
+        $r->validate([
+            // validar
+        ]);
+
+        $article = Article::create($r->all());
+
+        return view("articuloCreado", ["article" => $article]);
+
+    }
+
+
+
+    public function listarArticulos()
+    {
+        // listar todos los articulos
+        // $list = Article::all();
+
+        //listar articulos con mas de 300 visitas
+        $list = Article::where('views', '>', 300)->get();
+        
+        return view("listadoArticulos", ["list" => $list]);
+
+    }
 }
+
