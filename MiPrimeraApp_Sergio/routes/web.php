@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CalculadoraController;
 use App\Http\Controllers\CalculadoraIMCController;
 use App\Http\Controllers\ItemController;
@@ -66,3 +67,11 @@ Route::get('/producto/borrar/{id}', [ProductoController::class, 'borrarProducto'
 //5.14
 Route::get('/producto/modificar/{id}', [ProductoController::class, 'actualizarProducto'])->name('actualizarProducto');
 Route::post('/producto/modificar/{id}', [ProductoController::class, 'procesarActualizarProducto'])->name('procesarActualizarProducto');
+
+// Practica 1
+Route::get('/', [BlogController::class, 'portada'])->name('portada');
+
+Route::get('/noticia/nueva', [BlogController::class, 'nuevaNoticia'])->name('nuevaNoticia');
+Route::post('/noticia/nueva', [BlogController::class, 'procesarFormularioNoticia'])->name('procesarFormularioNoticia');
+
+Route::get('/noticia/{id}', [BlogController::class, 'verNoticia'])->name('verNoticia');
