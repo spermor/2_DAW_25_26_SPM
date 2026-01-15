@@ -59,3 +59,10 @@ Route::post('/producto', [ProductoController::class, 'procesarFormProducto'])->n
 
 //5.12
 Route::get('/productos', [ProductoController::class, 'mostrarProductos'])->name('mostrarProductos');
+
+//5.13
+Route::get('/producto/borrar/{id}', [ProductoController::class, 'borrarProducto'])->name('borrarProducto');
+
+//5.14
+Route::get('/producto/modificar/{id}', [ProductoController::class, 'actualizarProducto'])->name('actualizarProducto');
+Route::post('/producto/modificar/{id}', [ProductoController::class, 'procesarActualizarProducto'])->name('procesarActualizarProducto');

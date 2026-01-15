@@ -13,10 +13,10 @@
     <form action="{{ route('procesarFormProducto') }}" method="POST">
         @csrf
 
-       Nombre: <input type="text" name="nombre"><br>
-       Descripcion: <input type="text" name="descripcion"><br>
-       Precio: <input type="number" name="precio"><br>
-       Stock: <input type="number" name="stock"><br>
+        Nombre: <input type="text" name="nombre"><br>
+        Descripcion: <input type="text" name="descripcion"><br>
+        Precio: <input type="number" name="precio"><br>
+        Stock: <input type="number" name="stock"><br>
 
 
         <button type="submit">Crear Producto</button>
